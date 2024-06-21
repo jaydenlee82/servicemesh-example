@@ -2,7 +2,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysql
-  namespace: "30"
 spec:
   ports:
   - port: 3306
