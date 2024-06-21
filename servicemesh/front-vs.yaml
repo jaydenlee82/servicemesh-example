@@ -1,0 +1,31 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: front-vs
+  namespace: "30"
+spec:
+  gateways:
+  - front-gateway
+  hosts:
+  - front-30.apps.poc.amc
+  http:
+  - match:
+    - uri:
+        exact: /
+    - uri:
+        prefix: /add_user
+    - uri:
+        prefix: /delete_user
+    route:
+    - destination:
+        host: front.30.svc.cluster.local
+        subset: v1
+        port:
+          number: 80
+      weight: 50
+    - destination:
+        host: front.30.svc.cluster.local
+        subset: v2
+        port:
+          number: 80
+      weight: 50

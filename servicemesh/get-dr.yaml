@@ -1,0 +1,11 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: get-dr
+  namespace: "30"
+spec:
+  host: get.30.svc.cluster.local 
+  subsets:
+  - labels:
+      app: get
+    name: v1

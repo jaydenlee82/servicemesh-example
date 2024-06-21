@@ -1,13 +1,13 @@
 kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
-  name: delete-buildconfig
+  name: front-v1-buildconfig
   namespace: '30'
 spec:
   output:
     to:
       kind: DockerImage
-      name: 'image-registry.openshift-image-registry.svc:5000/30/delete:v1'
+      name: 'image-registry.openshift-image-registry.svc:5000/30/front:v1'
   resources: {}
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
@@ -25,7 +25,5 @@ spec:
     type: Git
     git:
       uri: 'https://gitlab.poc.amc:9443/root/servicemesh-example.git'
-    contextDir: /delete_user_app
+    contextDir: /front_app_v1
   runPolicy: Serial
-status:
-  lastVersion: 14

@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: get-vs
+  namespace: "30"
+spec:
+  hosts:
+  - get.30.svc.cluster.local
+  http:
+  - match:
+    - uri:
+        exact: /
+    - uri:
+        prefix: /get_users
+    route:
+    - destination:
+        host: get.30.svc.cluster.local
+        port:
+          number: 80
