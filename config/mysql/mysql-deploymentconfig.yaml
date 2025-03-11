@@ -5,6 +5,7 @@ metadata:
     app.openshift.io/runtime: mysql-database
     template: mysql-persistent-template
   name: mysql
+  namespace: testjin
 spec:
   replicas: 1
   revisionHistoryLimit: 10
