@@ -24,6 +24,6 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://gitlab.poc.amc:9443/root/servicemesh-example.git'
+      uri: 'https://github.com/jaydenlee82/servicemesh-example.git'
     contextDir: /delete_user_app_v2
   runPolicy: Serial
