@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: get-v1
-  namespace: "30"
+  namespace: testjin
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -26,7 +26,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/30/get:v1
+      - image: image-registry.openshift-image-registry.svc:5000/testjin/get:v1
         imagePullPolicy: IfNotPresent
         name: container
         ports:
