@@ -2,12 +2,12 @@ kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
   name: front-v2-buildconfig
-  namespace: '30'
+  namespace: testjin
 spec:
   output:
     to:
       kind: DockerImage
-      name: 'image-registry.openshift-image-registry.svc:5000/30/front:v2'
+      name: 'image-registry.openshift-image-registry.svc:5000/testjin/front:v2'
   resources: {}
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
@@ -24,6 +24,6 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://gitlab.poc.amc:9443/root/servicemesh-example.git'
+      uri: 'https://github.com/jaydenlee82/servicemesh-example.git'
     contextDir: /front_app_v2
   runPolicy: Serial
