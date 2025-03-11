@@ -2,10 +2,10 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: get-vs
-  namespace: "30"
+  namespace: testjin
 spec:
   hosts:
-  - get.30.svc.cluster.local
+  - get.testjin.svc.cluster.local
   http:
   - match:
     - uri:
@@ -14,6 +14,6 @@ spec:
         prefix: /get_users
     route:
     - destination:
-        host: get.30.svc.cluster.local
+        host: get.testjin.svc.cluster.local
         port:
           number: 80
