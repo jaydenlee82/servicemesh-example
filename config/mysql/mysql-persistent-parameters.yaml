@@ -12,4 +12,5 @@ data:
 kind: Secret
 metadata:
   name: mysql-persistent-parameters-qghfx
+  namespace: testjin
 type: Opaque
