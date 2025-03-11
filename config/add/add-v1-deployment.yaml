@@ -26,7 +26,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/30/add:v1
+      - image: image-registry.openshift-image-registry.svc:5000/testjin/add:v1
         imagePullPolicy: IfNotPresent
         name: container
         ports:
