@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: add-v1
-  namespace: "30"
+  namespace: testjin
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
