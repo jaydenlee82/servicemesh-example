@@ -2,12 +2,12 @@ kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
   name: add-v2-buildconfig
-  namespace: testjin
+  namespace: smh
 spec:
   output:
     to:
       kind: DockerImage
-      name: 'image-registry.openshift-image-registry.svc:5000/testjin/add:v2'
+      name: 'image-registry.openshift-image-registry.svc:5000/smh/add:v2'
   resources: {}
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
