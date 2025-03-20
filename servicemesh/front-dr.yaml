@@ -2,9 +2,9 @@ apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: front-dr
-  namespace: testjin
+  namespace: smh
 spec:
-  host: front.testjin.svc.cluster.local 
+  host: front.smh.svc.cluster.local 
   trafficPolicy:
     connectionPool:
       tcp:
