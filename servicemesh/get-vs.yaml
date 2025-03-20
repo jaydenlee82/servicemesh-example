@@ -15,5 +15,13 @@ spec:
     route:
     - destination:
         host: get.smh.svc.cluster.local
+        subset: v1
         port:
           number: 80
+      weight: 50
+    - destination:
+        host: get.smh.svc.cluster.local
+        subset: v2
+        port:
+          number: 80
+      weight: 50
