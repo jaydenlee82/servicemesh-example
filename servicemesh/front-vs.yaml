@@ -2,12 +2,12 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: front-vs
-  namespace: testjin
+  namespace: smh
 spec:
   gateways:
-  - testjin-front-gateway
+  - smh-front-gateway
   hosts:
-  - testjin30.apps.poc.amc
+  - front.apps.cluster3.mtp.local
   http:
   - match:
     - uri:
@@ -18,13 +18,13 @@ spec:
         prefix: /delete_user
     route:
     - destination:
-        host: front.testjin.svc.cluster.local
+        host: front.smh.svc.cluster.local
         subset: v1
         port:
           number: 80
       weight: 50
     - destination:
-        host: front.testjin.svc.cluster.local
+        host: front.smh.svc.cluster.local
         subset: v2
         port:
           number: 80
