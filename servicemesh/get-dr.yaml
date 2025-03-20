@@ -2,10 +2,13 @@ apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: get-dr
-  namespace: testjin
+  namespace: smh
 spec:
-  host: get.testjin.svc.cluster.local 
+  host: get.smh.svc.cluster.local 
   subsets:
   - labels:
       app: get
     name: v1
+  - labels:
+      app: get
+    name: v2
