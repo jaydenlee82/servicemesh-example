@@ -2,10 +2,10 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: add-vs
-  namespace: testjin
+  namespace: smh
 spec:
   hosts:
-  - add.testjin.svc.cluster.local
+  - add.smh.svc.cluster.local
   http:
   - match:
     - uri:
@@ -14,6 +14,6 @@ spec:
         prefix: /add_user
     route:
     - destination:
-        host: add.testjin.svc.cluster.local
+        host: add.smh.svc.cluster.local
         port:
           number: 80
