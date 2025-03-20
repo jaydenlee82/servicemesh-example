@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:password@mysql.30.svc.cluster.local:3306/userdb'  
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:password@mysql.smh.svc.cluster.local:3306/userdb'  
 db = SQLAlchemy(app)
 
 class User(db.Model):
