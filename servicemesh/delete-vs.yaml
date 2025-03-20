@@ -2,10 +2,10 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: delete-vs
-  namespace: "testjin"
+  namespace: "smh"
 spec:
   hosts:
-  - delete.testjin.svc.cluster.local
+  - delete.smh.svc.cluster.local
   http:
   - match:
     - uri:
@@ -14,6 +14,6 @@ spec:
         prefix: /delete_user
     route:
     - destination:
-        host: delete.testjin.svc.cluster.local
+        host: delete.smh.svc.cluster.local
         port:
           number: 80
