@@ -1,14 +1,14 @@
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
-  name: testjin-front-gateway
-  namespace: testjin
+  name: smh-front-gateway
+  namespace: smh
 spec:
   selector:
     istio: ingressgateway
   servers:
   - hosts:
-    - testjin30.apps.poc.amc
+    - front.apps.cluster3.mtp.local
     port:
       name: http
       number: 80
