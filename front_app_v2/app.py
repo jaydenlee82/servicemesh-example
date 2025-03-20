@@ -6,9 +6,9 @@ app = Flask(__name__)
 # 서비스 상태를 나타내는 변수
 service_ready = True
 
-ADD_USER_SERVICE_URL = 'http://add.30.svc.cluster.local:80/add_user'
-GET_USERS_SERVICE_URL = 'http://get.30.svc.cluster.local:80/get_users'
-DELETE_USER_SERVICE_URL = 'http://delete.30.svc.cluster.local:80/delete_user'
+ADD_USER_SERVICE_URL = 'http://add.smh.svc.cluster.local:80/add_user'
+GET_USERS_SERVICE_URL = 'http://get.smh.svc.cluster.local:80/get_users'
+DELETE_USER_SERVICE_URL = 'http://delete.smh.svc.cluster.local:80/delete_user'
 
 @app.route('/')
 def index():
